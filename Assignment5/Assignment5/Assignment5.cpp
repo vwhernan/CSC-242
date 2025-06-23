@@ -12,9 +12,24 @@
 ** -------------------------------------------------------------------------*/
 using namespace std;
 #include <iostream>
+#include "SpellChecker.h"
+#include "DecrypterClass.h"
+
+void runSpellChecker() {
+    SpellChecker sp;
+    sp.printText();
+}
+
+
+void rundecrypter() {
+    DecrypterClass dc;
+    dc.printText();
+}
 
 int main()
 {
-    cout << "Hello World!\n";
+    runSpellChecker();
+    rundecrypter();
+    return 0;
 }
 
