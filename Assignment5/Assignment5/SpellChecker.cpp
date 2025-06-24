@@ -92,8 +92,4 @@ string SpellChecker::WordsNotInDictionary(vector<string>DictionaryList, vector<s
     }
     return wordsNotInDictionary;
 }
-/*
-@Brief: Compares a list of user-provided words against a dictionary and identifies any that are not found.
-@Param: DictionaryList A vector of uppercase dictionary words to check against.
-@Param: UserWords A vector of uppercase words entered by the user.    
-@Return:A single space-separated string of words that are present in UserWords but not found in DictionaryList.
+
