@@ -15,9 +15,9 @@ SpellChecker::~SpellChecker() {
 //_________________________________________________________-Functions-____________________________________________________________________________
 
 /*
-@Brief: Constructs a new SpellChecker object and initializes internal state if necessary.
-@Param: None needed since no parameters are accepted
-@Return: None needed since nothing is returned
+@Brief: Reads words from a text file and returns them as uppercase strings in a vector.
+@Param: the path to the input file containing user-provided words,
+@Return:  A vector of uppercase strings extracted from the file. Returns an empty vector if the file cannot be opened.
 */
 vector<string> SpellChecker::GetUserWordList(string filepath) {
     ifstream in_file;
@@ -44,8 +44,8 @@ vector<string> SpellChecker::GetUserWordList(string filepath) {
 }
 
 /*
-@Brief: Reads words from a file and returns them as uppercase strings in a vector.
-@Param: The path to the input file containing user-provided words, separated by whitespace.
+@Brief: Reads words from a text file and returns them as uppercase strings in a vector.
+@Param: The path to the input file containing dictionary words,
 @Return: A vector of uppercase strings extracted from the file. Returns an empty vector if the file cannot be opened.
 */
 vector<string> SpellChecker::GetDictionaryAsVector(string filepath) {
@@ -74,9 +74,9 @@ vector<string> SpellChecker::GetDictionaryAsVector(string filepath) {
 }
 
 /*
-@Brief: Reads a list of words from a dictionary file and stores them in uppercase.
-@Param: The path to the file containing dictionary words, separated by whitespace.
-@Return: A vector of strings containing the uppercase words from the file. Returns an empty vector if the file fails to open.
+@Brief: Reads a list of words from a dictionary file and user file and compares what words are not in the dicitonary.
+@Param: dictionary vector, userwords vector
+@Return: A string containing the uppercase words not in the file. 
 */
 string SpellChecker::WordsNotInDictionary(vector<string>DictionaryList, vector<string>UserWords) {
     string wordToCheck;
