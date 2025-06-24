@@ -15,9 +15,9 @@ SpellChecker::~SpellChecker() {
 //_________________________________________________________-Functions-____________________________________________________________________________
 
 /*
-@Brief: Test
-@Param:
-@Return:
+@Brief: Constructs a new SpellChecker object and initializes internal state if necessary.
+@Param: None needed since no parameters are accepted
+@Return: None needed since nothing is returned
 */
 vector<string> SpellChecker::GetUserWordList(string filepath) {
     ifstream in_file;
@@ -44,9 +44,9 @@ vector<string> SpellChecker::GetUserWordList(string filepath) {
 }
 
 /*
-@Brief:
-@Param:
-@Return:
+@Brief: Reads words from a file and returns them as uppercase strings in a vector.
+@Param: The path to the input file containing user-provided words, separated by whitespace.
+@Return: A vector of uppercase strings extracted from the file. Returns an empty vector if the file cannot be opened.
 */
 vector<string> SpellChecker::GetDictionaryAsVector(string filepath) {
     ifstream in_file;
@@ -74,9 +74,9 @@ vector<string> SpellChecker::GetDictionaryAsVector(string filepath) {
 }
 
 /*
-@Brief:
-@Param:
-@Return:
+@Brief: Reads a list of words from a dictionary file and stores them in uppercase.
+@Param: The path to the file containing dictionary words, separated by whitespace.
+@Return: A vector of strings containing the uppercase words from the file. Returns an empty vector if the file fails to open.
 */
 string SpellChecker::WordsNotInDictionary(vector<string>DictionaryList, vector<string>UserWords) {
     string wordToCheck;
@@ -92,4 +92,8 @@ string SpellChecker::WordsNotInDictionary(vector<string>DictionaryList, vector<s
     }
     return wordsNotInDictionary;
 }
-
+/*
+@Brief: Compares a list of user-provided words against a dictionary and identifies any that are not found.
+@Param: DictionaryList A vector of uppercase dictionary words to check against.
+@Param: UserWords A vector of uppercase words entered by the user.    
+@Return:A single space-separated string of words that are present in UserWords but not found in DictionaryList.
