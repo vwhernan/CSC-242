@@ -11,11 +11,9 @@ DecrypterClass::~DecrypterClass() {
     
 }
 //_________________________________________________________-Functions-____________________________________________________________________________
-/*
-@Brief:
-@Param:
-@Return:
-*/
+
+
+
 void DecrypterClass::WriteMessageToFile(string filename, string Message) {
     ofstream out_file(filename);
     if (out_file.is_open()) {
@@ -36,9 +34,10 @@ void DecrypterClass::WriteMessageToFile(string filename, string Message) {
 }
 
 /*
-@Brief:
-@Param:
-@Return:
+@Brief: Writes the specified message to a file with the given filename.
+@Param: The name (and optional path) of the file to which the message should be written.
+@Param: Message The string content to be written into the file.
+@Return: Void
 */
 string DecrypterClass::CreateCypher(string keyword) {
     string baseAlphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -83,9 +82,9 @@ string DecrypterClass::CreateCypher(string keyword) {
 
 }
 /*
-@Brief:
-@Param:
-@Return:
+@Brief: Generates a custom cipher alphabet using a keyword by deduplicating its letters and appending the reversed unused letters of the alphabet.
+@Param: The input keyword used to seed the cipher; only alphabetical characters are processed, and duplicates are removed.
+@Return: A string representing the full cipher alphabet, beginning with the processed keyword followed by the remaining letters in reverse order.
 */
 string DecrypterClass::EncryptMessage(string message, string encryptedAlphabet) {
     string encryptedMessage = "";
@@ -109,9 +108,10 @@ string DecrypterClass::EncryptMessage(string message, string encryptedAlphabet) 
     return encryptedMessage;
 }
 /*
-@Brief:
-@Param:
-@Return:
+@Brief: Encrypts a given message by substituting each alphabetical character with its mapped equivalent in the encrypted alphabet.
+@Param: The original string to be encrypted; non-alphabetic characters are preserved as-is.
+@Param: encryptedAlphabet A 26-character string representing the cipher alphabet, where each index corresponds to a letter in the standard alphabet.
+@Return: The encrypted version of the message, with substitutions applied to alphabetic characters only.
 */
 string DecrypterClass::GetMessageToDeCrypt(string filepath) {
     ifstream in_file;
@@ -138,9 +138,9 @@ string DecrypterClass::GetMessageToDeCrypt(string filepath) {
     return message;
 }
 /*
-@Brief:
-@Param:
-@Return:
+@Brief: Reads and concatenates lowercase words from a file into a single message string.
+@Param: The path to the file containing the encrypted message.
+@Return: A single string composed of all words in the file, converted to lowercase and concatenated without spaces.
 */
 string DecrypterClass::DecryptMessage(string message, string encryptedAlphabet) {
     string decryptedMessage = "";
@@ -164,3 +164,9 @@ string DecrypterClass::DecryptMessage(string message, string encryptedAlphabet) 
     }
     return decryptedMessage;
 }
+/*
+@Brief: Decrypts a message using a provided cipher alphabet by mapping each encrypted letter back to its original counterpart.
+@Param: The encrypted message to be decrypted; may contain letters and non-alphabetic characters.
+@Param: Alphabet A 26-character string representing the substitution cipher, where each index corresponds to a letter in the standard alphabet.
+@Return: A space-separated string of decrypted characters, with non-alphabetic characters preserved in place.
+*/
