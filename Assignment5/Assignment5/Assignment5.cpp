@@ -52,8 +52,11 @@ void runDecrypter() {
     DecrypterClass dc;
 
     //What is this code doing: Get Cypher KeyWord --> Encrypt or Decrypt --> 
+    do{
     cout << "Enter A KeyWord for Cyper: " << endl;
     cin >> keyword;
+   } while (!keyword.empty());
+    
     encryptedAlphabet = dc.CreateCypher(keyword);
 
     cout << "Would you like to: \n(1) Encrypt?\n(2) Decrypt?  " << endl;
