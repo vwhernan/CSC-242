@@ -18,7 +18,9 @@ public:
 	~DecrypterClass();
 
 	// Member function declaration
-	void printText();
+	void WriteMessageToFile(string filename, string Message);
 	string CreateCypher(string keyword);
 	string EncryptMessage(string message, string encryptedAlphabet);
+	string GetMessageToDeCrypt(string filepath);
+	string DecryptMessage(string filename, string encryptedAlphabet);
 };

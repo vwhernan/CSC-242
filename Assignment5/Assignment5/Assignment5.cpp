@@ -45,31 +45,39 @@ void runSpellChecker() {
 void runDecrypter() {
     //Delcarations
     int EncryptOrDecrypt;
+    string file = "Message.txt";
     string encryptedAlphabet;
     string keyword;
     string message;
     DecrypterClass dc;
 
-    //What is this code doing:
+    //What is this code doing: Get Cypher KeyWord --> Encrypt or Decrypt --> 
     cout << "Enter A KeyWord for Cyper: " << endl;
     cin >> keyword;
     encryptedAlphabet = dc.CreateCypher(keyword);
 
-    cout << "Would you like to Encrypt (1)? Would you like to Decrypt (2)? Select 1 or 2." << endl;
+    cout << "Would you like to: \n(1) Encrypt?\n(2) Decrypt?  " << endl;
     cin >> EncryptOrDecrypt;
 
+    //What is this code doing: Encrytp --> get message to encrypt --> encrypt message --> write to file
     if (EncryptOrDecrypt == 1) {
         cout << "Type a Message to Encrypt: " << endl;
-        cin >> message;
+        // before using getline. Without this, getline will read an empty string.
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        getline(cin, message);
         string eMessage = dc.EncryptMessage(message, encryptedAlphabet);
-        cout << message <<endl;
-        cout << eMessage;
+        dc.WriteMessageToFile(file, eMessage);
     }
 
+    //What is this code doing: Decrypt --> get message from file --> decrypt message --> output decrypted message
     else if(EncryptOrDecrypt == 2){
-      
-    }
+        string EncryptedMessage = dc.GetMessageToDeCrypt(file);
+        string DecryptedMessage = dc.DecryptMessage(EncryptedMessage, encryptedAlphabet);
 
+        cout << DecryptedMessage;
+
+    }
+    //ends program if invalid choice Encrypt or Decrypt
     else {
         cout << "Invalid Selection" << endl;
     }

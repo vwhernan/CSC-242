@@ -10,13 +10,36 @@ DecrypterClass::DecrypterClass() {
 DecrypterClass::~DecrypterClass() {
     
 }
+//_________________________________________________________-Functions-____________________________________________________________________________
+/*
+@Brief:
+@Param:
+@Return:
+*/
+void DecrypterClass::WriteMessageToFile(string filename, string Message) {
+    ofstream out_file(filename);
+    if (out_file.is_open()) {
+        // Write the content string to the file.
+        out_file << Message;
 
-// printText method definition
-void DecrypterClass::printText() {
-    cout << "This message is from the DeCryptor class" << endl; 
+        // Close the file stream. It's good practice to explicitly close it,
+        // although it will be automatically closed when outputFile goes out of scope.
+        out_file.close();
+         
+        cout << "Successfully wrote to file: " + filename;
+    }
+    else {
+        // If the file could not be opened, print an error message.
+        cout << "Error: Unable to open file for writing: " + filename;
+    }
+    return;
 }
 
-
+/*
+@Brief:
+@Param:
+@Return:
+*/
 string DecrypterClass::CreateCypher(string keyword) {
     string baseAlphabet = "abcdefghijklmnopqrstuvwxyz";
     string processedKeyword = "";
@@ -59,7 +82,11 @@ string DecrypterClass::CreateCypher(string keyword) {
     return cipherAlphabet;
 
 }
-
+/*
+@Brief:
+@Param:
+@Return:
+*/
 string DecrypterClass::EncryptMessage(string message, string encryptedAlphabet) {
     string encryptedMessage = "";
     string standardAlphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -80,4 +107,60 @@ string DecrypterClass::EncryptMessage(string message, string encryptedAlphabet) 
     }
 
     return encryptedMessage;
+}
+/*
+@Brief:
+@Param:
+@Return:
+*/
+string DecrypterClass::GetMessageToDeCrypt(string filepath) {
+    ifstream in_file;
+    string data;
+    string message;
+    in_file.open(filepath);
+
+
+    if (!in_file.is_open()) {
+        cerr << "Error opening file: " << filepath << endl;
+        return message;
+
+    }
+
+    while (in_file >> data) {
+
+        transform(data.begin(), data.end(), data.begin(), [](unsigned char c) {return tolower(c); });
+        message= message + data;
+
+    }
+
+    in_file.close();
+
+    return message;
+}
+/*
+@Brief:
+@Param:
+@Return:
+*/
+string DecrypterClass::DecryptMessage(string message, string encryptedAlphabet) {
+    string decryptedMessage = "";
+    string standardAlphabet = "abcdefghijklmnopqrstuvwxyz"; 
+
+    for (char c : message) {
+        if (isalpha(c)) {
+            char lowerC = tolower(c);     
+
+            size_t index = encryptedAlphabet.find(lowerC);
+            if (index != string::npos) {
+                char decryptedChar = standardAlphabet[index];
+                decryptedMessage = decryptedMessage + " " + decryptedChar;
+            }
+        
+        }
+        else {
+            // Non-alphabetic characters are kept as is
+            decryptedMessage = decryptedMessage + " " + c;
+        }
+    }
+    return decryptedMessage;
 }
