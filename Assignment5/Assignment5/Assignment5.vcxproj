@@ -133,7 +133,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DecrypterClass.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SpellChecker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Assignment5.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

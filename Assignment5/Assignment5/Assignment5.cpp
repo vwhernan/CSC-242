@@ -16,8 +16,12 @@ using namespace std;
 #include "DecrypterClass.h"
 
 void runSpellChecker() {
+    string file = "words.txt";
+    vector <string> words;
     SpellChecker sp;
-    sp.printText();
+
+    sp.printText(file);
+
 }
 
 

@@ -1,5 +1,9 @@
 #pragma once
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include <string>
+
 using namespace std;
 
 class SpellChecker{
@@ -11,7 +15,8 @@ class SpellChecker{
 	~SpellChecker();
 
 	// Member function declaration
-	void printText();
+	void printText(string filepath);
+	vector<string> GetDictionaryAsVector(vector<string>wordlist, string filepath);
 
 };
 
