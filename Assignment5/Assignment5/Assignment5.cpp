@@ -31,13 +31,13 @@ void runSpellChecker() {
     wordsMisSpelled = sp.WordsNotInDictionary(dictionaryList, words);
     
                 //Prints original user words
-    cout << "\n\nThe following words are in the user word list:" << endl;
+    cout << "\n\nThe following words are in the users word list:" << endl;
     for (string word : words) {
         cout << word + " ";
     }
 
                //prints miss spelled words
-    cout << "\n\nThe following words are miss spelled: " << "\n" + wordsMisSpelled + "\n\n";
+    cout << "\n\nThe following words are not in the systems dictionary: " << "\n" + wordsMisSpelled + "\n\n";
 
 }
 
