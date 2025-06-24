@@ -53,7 +53,7 @@ void runDecrypter() {
 
     //What is this code doing: Get Cypher KeyWord --> Encrypt or Decrypt --> 
     do {
-        cout << "Enter A KeyWord for Cyper: " << endl;
+        cout << "Enter A KeyWord for Cypher: " << endl;
         cin >> keyword;
     } while (keyword.empty());
     
