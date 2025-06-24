@@ -3,7 +3,8 @@
 #include <vector>
 #include <fstream>
 #include <string>
-
+#include <algorithm>
+#include <cctype>
 using namespace std;
 
 class SpellChecker{
@@ -15,8 +16,9 @@ class SpellChecker{
 	~SpellChecker();
 
 	// Member function declaration
-	void printText(string filepath);
-	vector<string> GetDictionaryAsVector(vector<string>wordlist, string filepath);
+	vector<string>  GetUserWordList(string filepath);
+	vector<string> GetDictionaryAsVector(string filepath);
+	string WordsNotInDictionary(vector<string>DictionaryList, vector<string>UserWords);
 
 };
 
