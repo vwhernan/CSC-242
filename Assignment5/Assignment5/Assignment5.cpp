@@ -5,7 +5,7 @@
 ** Class: 	CSC 242
 ** Assignment: 	Lesson #5
 ** File: 	Assignment5.cpp
-** Description: This is a test for assignment 3
+** Description: This application has 2 programs built in.  SpellChecker and Decrypter.
 **
 ** Author: 	Vincent Hernandez
 ** Date: 	06/19/2025
@@ -28,8 +28,20 @@ void rundecrypter() {
 
 int main()
 {
-    runSpellChecker();
-    rundecrypter();
+    int choice;
+    cout << "Select a program: 1 for spell checker, 2 for decrypter" << endl;
+    cin >> choice;
+
+    if (choice == 1) {
+        runSpellChecker();
+    }
+    else if (choice == 2) {
+        rundecrypter();
+    }
+    else {
+        cout << "invalid entry" << endl;
+    }
+
     return 0;
 }
 
