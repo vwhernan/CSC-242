@@ -16,8 +16,7 @@ class SpellChecker{
 	~SpellChecker();
 
 	// Member function declaration
-	vector<string>  GetUserWordList(string filepath);
-	vector<string> GetDictionaryAsVector(string filepath);
+	vector<string>  GetWordList(string filepath);
 	string WordsNotInDictionary(vector<string>DictionaryList, vector<string>UserWords);
 
 };

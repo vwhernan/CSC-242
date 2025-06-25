@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{24917DEC-81FF-494A-BF7F-EB43420FB503}|Assignment5\\Assignment5.vcxproj|C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\SpellChecker.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{24917DEC-81FF-494A-BF7F-EB43420FB503}|Assignment5\\Assignment5.vcxproj|solutionrelative:Assignment5\\SpellChecker.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24917DEC-81FF-494A-BF7F-EB43420FB503}|Assignment5\\Assignment5.vcxproj|C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\DecrypterClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{24917DEC-81FF-494A-BF7F-EB43420FB503}|Assignment5\\Assignment5.vcxproj|solutionrelative:Assignment5\\DecrypterClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{24917DEC-81FF-494A-BF7F-EB43420FB503}|Assignment5\\Assignment5.vcxproj|C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\Assignment5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24917DEC-81FF-494A-BF7F-EB43420FB503}|Assignment5\\Assignment5.vcxproj|solutionrelative:Assignment5\\Assignment5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -39,38 +31,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SpellChecker.cpp",
-              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\SpellChecker.cpp",
-              "RelativeDocumentMoniker": "Assignment5\\SpellChecker.cpp",
-              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\SpellChecker.cpp",
-              "RelativeToolTip": "Assignment5\\SpellChecker.cpp",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAA4AAACSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-24T17:34:47.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DecrypterClass.cpp",
-              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\DecrypterClass.cpp",
-              "RelativeDocumentMoniker": "Assignment5\\DecrypterClass.cpp",
-              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\DecrypterClass.cpp",
-              "RelativeToolTip": "Assignment5\\DecrypterClass.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-24T17:12:29.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Assignment5.cpp",
               "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\Assignment5.cpp",
               "RelativeDocumentMoniker": "Assignment5\\Assignment5.cpp",
               "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\CSC-242\\Assignment5\\Assignment5\\Assignment5.cpp",
               "RelativeToolTip": "Assignment5\\Assignment5.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswB0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-24T04:02:54.439Z",
               "EditorCaption": ""

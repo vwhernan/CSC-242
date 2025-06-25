@@ -25,9 +25,9 @@ void runSpellChecker() {
     SpellChecker sp;
 
     //What is this code doing: GetDictionaryAsVector --> GetUserWordList --> WordsNotInDictionary --> OutPut Words misspelled
-    dictionaryList = sp.GetDictionaryAsVector(file);
+    dictionaryList = sp.GetWordList(file);
     file = "Words.txt";
-    words = sp.GetUserWordList(file);
+    words = sp.GetWordList(file);
     wordsMisSpelled = sp.WordsNotInDictionary(dictionaryList, words);
     
                 //Prints original user words
